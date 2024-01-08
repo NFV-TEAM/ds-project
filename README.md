@@ -1,5 +1,5 @@
 
-#WIP Asignment
+# WIP Asignment
 
 ## Start postgres db as container
 
@@ -13,4 +13,4 @@ docker run --name my-mysql-container --rm \
 -v mysql-data:/var/lib/mysql \
 -d mysql:latest
 ```
-##Authors
+## Authors
