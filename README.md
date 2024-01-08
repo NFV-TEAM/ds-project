@@ -1,7 +1,7 @@
 
 # WIP Asignment
 
-## Start postgres db as container
+## Start MySQL as container
 
 ```bash
 docker run --name my-mysql-container --rm \
