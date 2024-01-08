@@ -1,16 +1,16 @@
-# Start postgres db as container
+
+#WIP Asignment
+
+## Start postgres db as container
 
 ```bash
-docker run --name ds-lab-pg --rm \
--e POSTGRES_PASSWORD=pass123 \
--e POSTGRES_USER=dbuser \
--e POSTGRES_DB=students \
--d --net=host \
--v ds-lab-vol:/var/lib/postgresql/data \
-postgres:14
+docker run --name my-mysql-container --rm \
+-e MYSQL_ROOT_PASSWORD=kwdikos123 \
+-e MYSQL_DATABASE=tax_db \
+-e MYSQL_USER=myuser \
+-e MYSQL_PASSWORD=myuserpassword \
+-p 3306:3306 \
+-v mysql-data:/var/lib/mysql \
+-d mysql:latest
 ```
-
-# Links
-* [Postgres Docker Hub](https://hub.docker.com/_/postgres)
-* [JPA EntityManager example in Spring Boot](https://www.bezkoder.com/jpa-entitymanager-spring-boot/)
-* [JPA/Hibernate Persistence Context](https://www.baeldung.com/jpa-hibernate-persistence-context)
+##Authors
