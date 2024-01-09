@@ -47,6 +47,8 @@ public class SecurityConfig {
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/api/auth/**").permitAll()
                         .requestMatchers("/api/request/**").hasRole("TAXMAN")
+                        .requestMatchers("/api/submit/**").hasRole("REPRESENTATIVE")
+
                         /*.requestMatchers(
                                 "/v3/api-docs/**",
                                 "/v2/api-docs/**",

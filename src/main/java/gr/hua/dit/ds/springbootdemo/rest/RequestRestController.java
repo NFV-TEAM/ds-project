@@ -1,6 +1,9 @@
 package gr.hua.dit.ds.springbootdemo.rest;
 
+        import gr.hua.dit.ds.springbootdemo.config.JwtUtils;
+        import gr.hua.dit.ds.springbootdemo.entity.Company;
         import gr.hua.dit.ds.springbootdemo.entity.Request;
+        import gr.hua.dit.ds.springbootdemo.repository.CompanyRepository;
         import gr.hua.dit.ds.springbootdemo.repository.RequestRepository;
         import io.swagger.v3.oas.annotations.Hidden;
         import org.springframework.beans.factory.annotation.Autowired;
@@ -8,6 +11,8 @@ package gr.hua.dit.ds.springbootdemo.rest;
         import org.springframework.security.access.prepost.PreAuthorize;
         import org.springframework.web.bind.annotation.*;
 
+        import java.sql.Timestamp;
+        import java.time.LocalDateTime;
         import java.util.List;
         import java.util.Map;
 
@@ -43,7 +48,7 @@ public class RequestRestController {
         }
         //check for correct action
         if (!"approved".equals(action) && !"denied".equals(action)) {
-            return ResponseEntity.badRequest().body("Invalid action 3===>");
+            return ResponseEntity.badRequest().body("Invalid action");
         }
 
         requestToChange.setState(action);
@@ -51,12 +56,7 @@ public class RequestRestController {
 
         return ResponseEntity.ok("Request status updated to: " + action);
     }
-/*
-    @PostMapping("/submit")
-    public List<Course> gffetCourses(){
-        return courseRepository.findAll();
-    }
 
- */
+
 }
 
