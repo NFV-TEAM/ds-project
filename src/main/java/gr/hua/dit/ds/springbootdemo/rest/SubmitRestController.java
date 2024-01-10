@@ -7,32 +7,33 @@ import gr.hua.dit.ds.springbootdemo.repository.CompanyRepository;
 import gr.hua.dit.ds.springbootdemo.repository.RequestRepository;
 import io.swagger.v3.oas.annotations.Hidden;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cglib.core.Local;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.web.bind.annotation.*;
 
+import java.sql.Date;
 import java.sql.Timestamp;
 import java.time.LocalDateTime;
+import java.util.List;
+import java.util.Map;
 
-public class SumbitRestController {
-
-    @RestController
-    @RequestMapping("/api/request")
-    @Hidden
-    public class SubmitRestController {
-
-        @Autowired
-        private RequestRepository requestRepository;
-        @Autowired
-        private CompanyRepository companyRepository;
-
-        @Autowired
-        private JwtUtils jwtUtils;
+@RestController
+@RequestMapping("/api/submit")
+@Hidden
+public class SubmitRestController {
+    @Autowired
+    private CompanyRepository companyRepository;
 
 
-    @PostMapping("/submit")
+    @Autowired
+    private RequestRepository requestRepository;
+
+    @Autowired
+    private JwtUtils jwtUtils;
+
+
+    @PostMapping()
     public ResponseEntity<String> submitCompany(@RequestBody Company company) {
 
         if (companyRepository.existsByName(company.getName())){
@@ -58,4 +59,6 @@ public class SumbitRestController {
 
 
     */
-}}
+
+}
+
