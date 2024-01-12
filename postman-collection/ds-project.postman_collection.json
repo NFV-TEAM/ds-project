@@ -1,0 +1,246 @@
+{
+	"info": {
+		"_postman_id": "3f92a8fb-a1ff-4245-87c0-8f9c01ed9e8a",
+		"name": "ds-project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18289016"
+	},
+	"item": [
+		{
+			"name": "sign-in [REP]",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"JWT\",pm.response.json().accessToken)"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n \"username\":\"rep1\",\n \"password\":\"pass123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{hostname}}/api/auth/signin",
+					"host": [
+						"{{hostname}}"
+					],
+					"path": [
+						"api",
+						"auth",
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "submit request",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{JWT}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"company_name\": \"pcagmeno.gr\",\r\n  \"company_email\": \"exampldf1212e@example.com\",\r\n  \"goal\": \"Some sdfsgoal\",\r\n  \"articles_of_association\": \"Articles content\",\r\n  \"hq\": \"Headquarters location\",\r\n  \"executives\": \"List of executives\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{hostname}}/api/submit",
+					"host": [
+						"{{hostname}}"
+					],
+					"path": [
+						"api",
+						"submit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sign-in [TAX]",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"JWT\",pm.response.json().accessToken)"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n \"username\":\"tax1\",\n \"password\":\"pass123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{hostname}}/api/auth/signin",
+					"host": [
+						"{{hostname}}"
+					],
+					"path": [
+						"api",
+						"auth",
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "show pending list",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{JWT}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{hostname}}/api/request/pending",
+					"host": [
+						"{{hostname}}"
+					],
+					"path": [
+						"api",
+						"request",
+						"pending"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "show request by id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{JWT}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{hostname}}/api/request/pending",
+					"host": [
+						"{{hostname}}"
+					],
+					"path": [
+						"api",
+						"request",
+						"pending"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "review request",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{JWT}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"action\":\"approved\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{hostname}}/api/request/review/1",
+					"host": [
+						"{{hostname}}"
+					],
+					"path": [
+						"api",
+						"request",
+						"review",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
