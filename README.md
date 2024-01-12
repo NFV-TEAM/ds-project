@@ -2,8 +2,8 @@
 # WIP Asignment
 
 ## Prerequisites:
-JDK (used 17 for development)
-Maven
+JDK (used 17 for development)\
+Maven\
 MySQL server running 
 
 ### To start MySQL as docker container:
@@ -19,7 +19,7 @@ docker run --name my-mysql-container --rm \
 -d mysql:latest
 ```
 ## To run application
-(in project folder)
-mvn clean instal
-mvn spring-boot:run
+(in project folder)\
+mvn clean instal\
+mvn spring-boot:run\
 
