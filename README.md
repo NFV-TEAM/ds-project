@@ -23,3 +23,4 @@ docker run --name my-mysql-container --rm \
 mvn clean instal\
 mvn spring-boot:run\
 
+## Postman collection folder included with example requests
