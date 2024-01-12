@@ -1,5 +1,9 @@
 package gr.hua.dit.ds.springbootdemo.entity;
+import gr.hua.dit.ds.springbootdemo.repository.CompanyRepository;
 import jakarta.persistence.*;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import java.util.Random;
 
 @Entity
 public class Company {
@@ -133,6 +137,7 @@ public class Company {
                 ", hq='" + hq + '\'' +
                 '}';
     }
+
 
 
 }
