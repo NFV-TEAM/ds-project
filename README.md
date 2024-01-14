@@ -24,3 +24,18 @@ mvn clean instal\
 mvn spring-boot:run\
 
 ## Postman collection folder included with example requests
+{{hostname}} : localhost:9090
+## CLI commands 
+
+login
+logout
+list
+register [-u ,--username String] [-p, --password String] [-e, --email String] [-r,--role String] --help
+edit [--id Long] -u,--username String -e,--email String -r,--role String -p,--password String --help
+delete [--id long] --help
+
+admin credentials: admin admin
+
+
+
+
