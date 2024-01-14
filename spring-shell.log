@@ -1,0 +1,73 @@
+1705189342917:login
+1705189372391:login admin --password adminpassword
+1705189377166:logout
+1705189381249:quit
+1705189674143:login admin --password adminpassword
+1705189682193:exit
+1705192852491:login
+1705192858124:logoit
+1705192859712:logout
+1705192862354:login
+1705192873484:exit
+1705193094023:exit1
+1705195738284:login
+1705195744577:listUsers
+1705195751918:listuSERS
+1705195755508:list uers
+1705195757845:list users
+1705195780639:listUsers
+1705195790189:List Users
+1705195792891:list users
+1705195832636:listUsers
+1705195858776:testlist
+1705196150903:list_users
+1705196153353:login
+1705196159399:list-users
+1705196166262:list_users
+1705197536020:login
+1705197544766:list_users
+1705197549503:register
+1705197560839:registerUser
+1705197566732:registeruser
+1705197584664:register
+1705197621310:register --username vasilis --password pass123 --email adsf@asdg.com --role ROLE_TAXMAN
+1705197667698:register --username vasil --password 123 --email dafd@ga.com --role adsf
+1705197856358:register -username av --password 1234 --email lathos --role ROLE_TAXMAN
+1705197869968:register --username av --password 1234 --email lathos --role ROLE_TAXMAN
+1705197968247:quit
+1705198099716:register -u vais -p 123 -e asdf@gami.com -r ROLE_TAXMAN
+1705198113220:register -u vais -p 123 -e asdf@gami.co -r ROLE_TAXMAN
+1705198128680:register -u dfasdf -p1231 -e ads
+1705198147040:register -u vais -p 123 -e asdf@gami.com -r ROLE_TAXMAN
+1705198166544:register -u test -p test -e 123 -r ROLE_TAXMAN
+1705199248852:login
+1705199277380:list_users
+1705199288017:delete --id 4
+1705199620037:login
+1705199648199:register -u va -p dasfadsf -e dasf@ga.com -r ROLE_TAXMAN
+1705199654659:list_users
+1705199662208:delete 5
+1705199727941:register  -u tax2 -e tax2@ha.gr -p pass123 -r ROLE_TAXMAN
+1705200117453:login
+1705200125353:list
+1705200127693:list_users
+1705200142632:delete 5
+1705200148198:delete 9
+1705200532205:login
+1705200581530:list_users
+1705200617356:edit_user --id 3 -r ROLE_REPRESENTATIVE
+1705200791635:login
+1705200796386:list
+1705200809945:edit --id 3 -r ROLE_REPRESENTATIVE
+1705200814340:list
+1705200827077:logout
+1705200829820:exit
+1705200879132:login
+1705200891737:list
+1705201198589:exit
+1705201367437:login
+1705201380639:exit
+1705201582611:login
+1705201589566:exit
+1705202055546:exit1
+1705202238188:exit

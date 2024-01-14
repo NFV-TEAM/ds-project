@@ -10,6 +10,8 @@ import java.util.List;
 @Repository
 @Hidden
 public interface RequestRepository extends JpaRepository<Request, Long> {
+
+
     List<Request> findByState(String state);
 
     Request findById(Integer id);
