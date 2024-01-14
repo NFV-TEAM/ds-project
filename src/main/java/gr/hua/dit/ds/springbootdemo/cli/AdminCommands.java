@@ -38,7 +38,7 @@ public class AdminCommands {
     InputReader inputReader = new InputReader();
 
 
-    @ShellMethod("Login as an admin")
+    @ShellMethod("Log in as an admin")
     public String login() {
         if (loggedIn) {
             return "Already logged in.";
@@ -61,14 +61,16 @@ public class AdminCommands {
         return "Logged out.";
     }
 
-
+    /*
     @ShellMethod("exit application")
     public void exit() {
         System.exit(0);
     }
 
 
-    @ShellMethod("Lists registered users")
+     */
+
+    @ShellMethod("List registered users")
     public void list(){
 
         //(@ShellOption(value = "--role", defaultValue = "")String role){
@@ -83,7 +85,7 @@ public class AdminCommands {
         });
     }
 
-    @ShellMethod("Registers new User")
+    @ShellMethod("Register new User")
     public String register(
             @ShellOption(value={"-u","--username"},help = "Username") String username,
             @ShellOption(value={"-p","--password"},help = "Password") String password,
@@ -144,7 +146,7 @@ public class AdminCommands {
     }
 
 
-    @ShellMethod("Edit user data")
+    @ShellMethod("Edit user data by id")
     public String edit(
             @ShellOption(value = {"-i", "--id"}, help = "User ID") Long ID,
             @ShellOption(value = {"-u", "--username"}, help = "New username", defaultValue = "") String newUsername,
