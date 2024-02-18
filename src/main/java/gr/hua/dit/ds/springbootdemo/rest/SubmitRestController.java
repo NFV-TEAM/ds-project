@@ -23,6 +23,7 @@ import java.util.Map;
 import java.util.Optional;
 
 @RestController
+@CrossOrigin(origins = "http://localhost:5173")
 @RequestMapping("/api/submit")
 @Hidden
 public class SubmitRestController {
@@ -39,7 +40,7 @@ public class SubmitRestController {
     @Autowired
     private JwtUtils jwtUtils;
 
-
+    @CrossOrigin(origins = "http://localhost:5173")
     @PostMapping("")
     public ResponseEntity<String> submitCompany(@RequestHeader("Authorization") String token, @RequestBody SubmitRequest sumbitRequest) {
 
@@ -50,6 +51,7 @@ public class SubmitRestController {
             String repUsername = jwtUtils.getUserNameFromJwtToken(token.substring(7));
             Optional<User> optRepresentative = userRepository.findByUsername(repUsername);
             User representative = optRepresentative.get();
+
 
 
             System.out.println(repUsername);

@@ -17,7 +17,10 @@ package gr.hua.dit.ds.springbootdemo.rest;
         import java.util.List;
         import java.util.Map;
 
+
+
 @RestController
+@CrossOrigin(origins = "http://localhost:5173")
 @RequestMapping("/api/request")
 @Hidden
 public class RequestRestController {
@@ -29,6 +32,7 @@ public class RequestRestController {
     private RequestRepository requestRepository;
 
     //@PreAuthorize("hasRole("R")")
+    @CrossOrigin(origins = "http://localhost:5173")
     @GetMapping("/pending")
     public List<Request> getPendingReq(){
         return requestRepository.findByState("pending");
@@ -38,12 +42,14 @@ public class RequestRestController {
     @Autowired
     private TaxIDService taxIDService;
 
+    @CrossOrigin(origins = "http://localhost:5173")
     @GetMapping("/{id}")
     public Request getReqByID(@PathVariable Integer id) {
         return requestRepository.findById(id);
     }
 
 
+    @CrossOrigin(origins = "http://localhost:5173")
     @PostMapping("/review/{id}")
     public ResponseEntity<String> reviewReqById(@PathVariable Integer id,@RequestBody Map<String, String> requestBody){
         Request requestToChange = requestRepository.findById(id);

@@ -124,20 +124,18 @@ public class Company {
     }
 
 
-
     @Override
     public String toString() {
         return "Company{" +
                 "Id=" + Id +
                 ", name='" + name + '\'' +
                 ", email='" + email + '\'' +
-                ", taxID='" + taxID + '\'' +
+                ", taxID=" + taxID +
                 ", goal='" + goal + '\'' +
                 ", articles_of_association='" + articles_of_association + '\'' +
                 ", hq='" + hq + '\'' +
+                ", representative=" + representative +
+                ", executives='" + executives + '\'' +
                 '}';
     }
-
-
-
 }
